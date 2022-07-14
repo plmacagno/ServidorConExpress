@@ -17,7 +17,7 @@ app.get('/productos', (req, res)=>{
 
 app.get('/productoRandom', (req, res)=>{
     res.send({mensaje:" Bienvenidos a la ruta del producto accedido en forma random"});
-    array=[];
+    let array=[];
     array = fs.readFile('./productos/productos.txt','utf-8');
     const aleatorio = array[Math.floor(Math.random() * array.length)];
     console.log(aleatorio);
