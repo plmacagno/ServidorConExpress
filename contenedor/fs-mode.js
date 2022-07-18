@@ -1,4 +1,4 @@
-const fs = require('fs/promises');
+const fs = require('fs');
 
 
 
@@ -111,6 +111,16 @@ class CFile {
             }
         } 
 
+    async findAzar(){
+        try{
+        //    let array=[];
+        //    array = fs.readFile('./productos/productos.txt','utf-8');
+            let aleatorio = this.values[Math.floor(Math.random() * this.values.length)];
+            return aleatorio;
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
 }  
 
 module.exports = CFile
